@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="indexreviews.css">
+	<title>DMCS Review Page</title>
+</head>
+<body>
+	<!--NAVIGATION BAR-->
+	<header class="site-header">
+		<nav class="site-nav" aria-label="Primary navigation">
+			<a href="https://www.dmcreativesolutions.com/" class="site-logo" aria-label="DM Creative Solutions home">
+				<img src="https://i.postimg.cc/zfn1dfqc/android-chrome-192x192.png" alt="DM Creative Solutions logo">
+			</a>
+
+			<ul class="site-nav__links" role="list">
+				<li><a href="places.html">Places</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<!-- HERO -->
+		<section class="hero" aria-label="Intro">
+			<div class="hero-inner">
+
+				<div class="hero-copy">
+					<h1 class="hero-title">Real reviews from places I’ve been and products I’ve tested</h1>
+					<p class="hero-subtitle">
+						No hype. Just honest experiences, helpful details, and what I’d actually recommend.
+					</p>
+
+					<div class="hero-actions">
+						<a class="btn btn-disabled">Browse Places (Coming Soon)</a>
+						
+						<a class="btn btn-primary" href="products.html">Browse Products</a>
+					</div>
+				</div>
+
+				<div class="hero-media" aria-hidden="true">
+					<div class="hero-collage">
+						<figure class="hero-shot hero-shot--big"></figure>
+						<figure class="hero-shot hero-shot--top"></figure>
+						<figure class="hero-shot hero-shot--bottom"></figure>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- TRUST / PROOF STRIP -->
+	<section class="trust-strip" aria-label="Review credibility">
+		<ul class="trust-items">
+			<li>
+				<span class="trust-icon">✓</span>
+				428,000+ views on Google Maps
+			</li>
+			<li>
+				<span class="trust-icon">✓</span>
+				16,000+ views on a single review
+			</li>
+			<li>
+				<span class="trust-icon">✓</span>
+				Amazon Vine reviewer — invited to review products
+			</li>
+		</ul>
+	</section>
+
+	<!-- FEATURED REVIEWS -->
+	<section class="featured-reviews" aria-labelledby="featured-title">
+		<div class="featured-inner">
+
+			<h2 id="featured-title" class="section-title">Featured Reviews</h2>
+
+			<div class="featured-grid">
+
+				<!-- Primary featured card (UPDATED to Sheets) -->
+			<article class="review-card review-card--primary">
+				<div class="review-image">
+					<img src="https://i.postimg.cc/g0cTrNpS/sheets.jpg" alt="Extra deep pocket sheet set">
+				</div>
+
+				<div class="review-content">
+					<span class="review-tag">Household</span>
+
+					<h3 class="review-title">Extra Deep Pocket Sheet Set</h3>
+
+					<p class="review-meta">
+						Amazon Purchase <span>· Bedding</span>
+					</p>
+
+					<p class="review-excerpt">
+						Soft, secure-fitting sheets that stay in place on thicker mattresses and hold up well over time—an easy recommendation for comfort and value.
+					</p>
+					<a href="products.html#sheets" class="review-link">Read full review →</a>
+				</div>
+			</article>
+
+			<!-- Secondary card -->
+			<article class="review-card">
+				<div class="review-image">
+					<img src="https://i.postimg.cc/ZqYM0VmD/frozen.jpg" alt="Frozen dinnerware set">
+				</div>
+
+				<div class="review-content">
+					<span class="review-tag">Household</span>
+
+					<h3 class="review-title">Frozen Dinnerware Set (5-Piece)</h3>
+
+					<p class="review-meta">
+						Amazon Purchase <span>· Kids</span>
+					</p>
+
+					<p class="review-excerpt">
+						A complete kids dinnerware set that’s fun, practical, and perfect for Frozen fans.
+					</p>
+
+					<a href="products.html" class="review-link">Read full review →</a>
+				</div>
+			</article>
+
+			<!-- Secondary card -->
+			<article class="review-card">
+				<div class="review-image">
+					<img src="https://i.postimg.cc/HLWhjBmv/neck-fan.jpg" alt="Portable neck fan">
+				</div>
+
+				<div class="review-content">
+					<span class="review-tag">Electronics</span>
+
+					<h3 class="review-title">Portable Neck Fan</h3>
+
+					<p class="review-meta">
+						Amazon Purchase <span>· Outdoor Use</span>
+					</p>
+
+					<p class="review-excerpt">
+						A hands-free fan that works, but doesn’t quite deliver the cooling effect you might expect.
+					</p>
+
+					<a href="products.html" class="review-link">Read full review →</a>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>
+
+	<!-- BROWSE BY CATEGORY -->
+	<section class="browse-categories" aria-labelledby="browse-title">
+		<div class="browse-inner">
+
+			<h2 id="browse-title" class="section-title">Browse Reviews</h2>
+
+			<div class="category-grid">
+
+				<a href="places.html" class="category-tile category-tile--places">
+					<div class="category-overlay">
+						<h3>Places</h3>
+						<p>Restaurants, attractions, and experiences I’ve visited</p>
+					</div>
+				</a>
+
+				<a href="products.html" class="category-tile category-tile--products">
+					<div class="category-overlay">
+						<h3>Products</h3>
+						<p>Everyday items I’ve tested and actually use</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="site-footer" aria-label="Site footer">
+		<div class="footer-inner">
+
+			<div class="footer-brand">
+				<a href="index.html" class="footer-logo">DMCS Reviews</a>
+				<p class="footer-note">
+					Honest reviews of places I’ve visited and products I’ve tested.
+				</p>
+			</div>
+
+			<nav class="footer-nav" aria-label="Footer">
+				<div class="footer-col">
+					<p class="footer-title">Explore</p>
+					<ul class="footer-links" role="list">
+						<li><a href="places.html">Places</a></li>
+						<li><a href="products.html">Products</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<p class="footer-title">Info</p>
+					<ul class="footer-links" role="list">
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="disclosure.html">Disclosure</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<p class="footer-title">Connect</p>
+					<ul class="footer-links" role="list">
+						<li><a href="mailto:dmcreativesolutions.tech@gmail.com">dmcreativesolutions.tech@gmail.com</a></li>
+						<li class="footer-social">
+							<a href="https://www.instagram.com/dmcs.reviews/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+								Instagram
+							</a>
+							<a href="https://www.facebook.com/profile.php?id=61583983431972" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+								Facebook
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="footer-bottom">
+				<p>© <span id="year"></span> DMCS Reviews. All rights reserved.</p>
+				<p class="footer-disclaimer">
+					Some links may be affiliate links. You may earn a commission at no extra cost to you.
+				</p>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("year").textContent = new Date().getFullYear();
+		</script>
+	</footer>
+
+	<script src="indexreviews.js"></script>
+</body>
+</html>
