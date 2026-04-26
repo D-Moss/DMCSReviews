@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="indexreviews.css">
+	<link rel="stylesheet" href="places.css">
+	<title>Places | DMCS Reviews</title>
+</head>
+<body>
+	<header class="site-header">
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="https://www.dmcreativesolutions.com/" class="site-logo" aria-label="DM Creative Solutions home">
+				<img src="https://i.postimg.cc/zfn1dfqc/android-chrome-192x192.png" alt="DM Creative Solutions logo">
+			</a>
+
+			<ul class="site-nav__links" role="list">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="places.html" aria-current="page">Places</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html" class="nav-pill">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="places-hero" aria-labelledby="places-hero-title">
+			<div class="places-hero__inner">
+				<div class="places-hero__copy">
+					<h1 id="places-hero-title" class="places-hero__title">
+						Place reviews from spots I’ve actually visited.
+					</h1>
+
+					<p class="places-hero__text">
+						From hotels and restaurants to attractions, local stops, and experiences, these reviews share my honest thoughts on where I’ve been.
+					</p>
+
+					<div class="places-hero__actions">
+						<a href="#placesTabs" class="btn btn-primary">Browse Places</a>
+						<a href="products.html" class="btn btn-outline">See Product Reviews</a>
+					</div>
+				</div>
+
+				<div class="places-hero__panel">
+					<p class="places-hero__eyebrow">Explore by category</p>
+					<ul class="places-hero__list">
+						<li>Hotels and stays</li>
+						<li>Restaurants and food spots</li>
+						<li>Attractions, farms, zoos, and events</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="places-section" aria-labelledby="places-section-title">
+			<div class="places-section__inner">
+				<div class="places-section__header">
+					<h2 id="places-section-title" class="places-section__title">Browse place reviews</h2>
+					<p class="places-section__text">
+						Choose a category on the side to explore places I’ve visited, stayed, eaten, or experienced.
+					</p>
+				</div>
+
+				<div class="places-layout" id="placesTabs">
+					<aside class="places-tabs" aria-label="Place categories">
+						<button class="places-tabs__btn" type="button" data-tab="hotels">Hotels</button>
+						<button class="places-tabs__btn" type="button" data-tab="restaurants">Restaurants</button>
+						<button class="places-tabs__btn" type="button" data-tab="attractions">Attractions</button>
+						<button class="places-tabs__btn" type="button" data-tab="fitness">Fitness</button>
+					</aside>
+
+					<div class="places-content">
+						<div class="places-intro is-active">
+							<h3>Where should we go first?</h3>
+							<p>
+								Click one of the categories to see reviews of places I’ve visited. You’ll find honest thoughts, helpful details, and quick takeaways to help you decide whether a place is worth checking out.
+							</p>
+						</div>
+
+						<div class="places-panel" data-panel="hotels" hidden>
+							<div class="places-grid">
+
+								<article class="place-card">
+									<div class="place-card__image-wrap">
+										<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=70" alt="Hotel room" class="place-card__image">
+									</div>
+
+									<div class="place-card__body">
+										<span class="place-card__tag">Hotel</span>
+										<h3 class="place-card__title">Hotel Review Name</h3>
+										<p class="place-card__meta">Location • Stay Experience</p>
+										<p class="place-card__summary">
+											A short preview of the hotel review can go here.
+										</p>
+
+										<button class="place-card__toggle" type="button" aria-expanded="false">
+											Read More
+										</button>
+
+										<div class="place-card__full" hidden>
+											<p>
+												Add the full hotel review here. Talk about the room, cleanliness, location, service, parking, price, and whether you would stay again.
+											</p>
+										</div>
+									</div>
+								</article>
+
+							</div>
+						</div>
+
+						<div class="places-panel" data-panel="restaurants" hidden>
+							<div class="places-grid">
+
+								<article class="place-card">
+									<div class="place-card__image-wrap">
+										<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=70" alt="Restaurant table" class="place-card__image">
+									</div>
+
+									<div class="place-card__body">
+										<span class="place-card__tag">Restaurant</span>
+										<h3 class="place-card__title">Restaurant Review Name</h3>
+										<p class="place-card__meta">Location • Food Experience</p>
+										<p class="place-card__summary">
+											A short preview of the restaurant review can go here.
+										</p>
+
+										<button class="place-card__toggle" type="button" aria-expanded="false">
+											Read More
+										</button>
+
+										<div class="place-card__full" hidden>
+											<p>
+												Add the full restaurant review here. Mention the food, service, wait time, atmosphere, price, and whether you would go back.
+											</p>
+										</div>
+									</div>
+								</article>
+
+							</div>
+						</div>
+
+						<div class="places-panel" data-panel="attractions" hidden>
+							<div class="places-grid">
+
+								<article class="place-card">
+									<div class="place-card__image-wrap">
+										<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=70" alt="Outdoor attraction" class="place-card__image">
+									</div>
+
+									<div class="place-card__body">
+										<span class="place-card__tag">Attraction</span>
+										<h3 class="place-card__title">Attraction Review Name</h3>
+										<p class="place-card__meta">Location • Experience</p>
+										<p class="place-card__summary">
+											A short preview of the attraction review can go here.
+										</p>
+
+										<button class="place-card__toggle" type="button" aria-expanded="false">
+											Read More
+										</button>
+
+										<div class="place-card__full" hidden>
+											<p>
+												Add the full attraction review here. Talk about the experience, crowd, parking, price, photos, and whether it was worth visiting.
+											</p>
+										</div>
+									</div>
+								</article>
+
+							</div>
+						</div>
+
+						<div class="places-panel" data-panel="fitness" hidden>
+							<div class="places-grid">
+
+								<article class="place-card">
+									<div class="place-card__image-wrap">
+										<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=70" alt="Gym" class="place-card__image">
+									</div>
+
+									<div class="place-card__body">
+										<span class="place-card__tag">Fitness</span>
+										<h3 class="place-card__title">Fitness Review Name</h3>
+										<p class="place-card__meta">Location • Gym Experience</p>
+										<p class="place-card__summary">
+											A short preview of the fitness review can go here.
+										</p>
+
+										<button class="place-card__toggle" type="button" aria-expanded="false">
+											Read More
+										</button>
+
+										<div class="place-card__full" hidden>
+											<p>
+												Add the full fitness review here. Mention the space, equipment, cleanliness, staff, crowd level, and overall experience.
+											</p>
+										</div>
+									</div>
+								</article>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer" aria-label="Site footer">
+		<div class="footer-inner">
+			<div class="footer-brand">
+				<a href="index.html" class="footer-logo">DMCS Reviews</a>
+				<p class="footer-note">
+					Honest reviews of places I’ve visited and products I’ve tested.
+				</p>
+			</div>
+
+			<nav class="footer-nav" aria-label="Footer">
+				<div class="footer-col">
+					<p class="footer-title">Explore</p>
+					<ul class="footer-links" role="list">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="places.html">Places</a></li>
+						<li><a href="products.html">Products</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<p class="footer-title">About</p>
+					<ul class="footer-links" role="list">
+						<li><a href="about.html">About Me</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<p class="footer-title">Follow</p>
+					<ul class="footer-links" role="list">
+						<li class="footer-social">
+							<a href="https://www.instagram.com/dmcs.reviews/" target="_blank" rel="noopener noreferrer">Instagram</a>
+							<a href="https://www.facebook.com/profile.php?id=61583983431972" target="_blank" rel="noopener noreferrer">Facebook</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="footer-bottom">
+				<p>© 2026 DMCS Reviews. All rights reserved.</p>
+				<p class="footer-disclaimer">Reviews based on my personal experience and opinions.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="places.js"></script>
+</body>
+</html>
