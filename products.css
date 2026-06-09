@@ -79,9 +79,9 @@
 }
 
 .products-section__inner {
-	max-width: 1120px;
 	margin: 0 auto;
 	padding: 52px 16px 70px;
+	max-width: 1120px;
 }
 
 .products-section__header {
