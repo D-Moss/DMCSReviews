@@ -18,25 +18,91 @@ if (navToggle && navClose && navBackdrop) {
 }
 
 const filterButtons = document.querySelectorAll(".products-filter__btn");
-const productCards = document.querySelectorAll(".products-card");
+const productCards = Array.from(document.querySelectorAll(".products-card"));
 const emptyMessage = document.querySelector(".products-empty");
+const paginationContainer = document.querySelector("#pagination-buttons");
 
-function filterProducts(category) {
-	let visibleCount = 0;
+const cardsPerPage = 9;
+let currentFilter = "all";
+let currentPage = 1;
 
-	productCards.forEach((card) => {
+function getFilteredCards() {
+	return productCards.filter((card) => {
 		const categories = card.dataset.category.split(" ");
+		return currentFilter === "all" || categories.includes(currentFilter);
+	});
+}
 
-		if (category === "all" || categories.includes(category)) {
-			card.classList.remove("is-hidden");
-			visibleCount += 1;
-		} else {
-			card.classList.add("is-hidden");
-		}
+function closeExpandedReviews() {
+	document.querySelectorAll(".products-card__full").forEach((review) => {
+		review.hidden = true;
 	});
 
-	if (emptyMessage) {
-		emptyMessage.hidden = visibleCount !== 0;
+	document.querySelectorAll(".products-card__toggle").forEach((button) => {
+		button.setAttribute("aria-expanded", "false");
+		button.textContent = "Read More";
+	});
+}
+
+function renderProducts() {
+	const filteredCards = getFilteredCards();
+	const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+	productCards.forEach((card) => {
+		card.classList.add("is-hidden");
+	});
+
+	if (filteredCards.length === 0) {
+		if (emptyMessage) emptyMessage.hidden = false;
+		if (paginationContainer) paginationContainer.innerHTML = "";
+		return;
+	}
+
+	if (emptyMessage) emptyMessage.hidden = true;
+
+	if (currentPage > totalPages) {
+		currentPage = 1;
+	}
+
+	const start = (currentPage - 1) * cardsPerPage;
+	const end = start + cardsPerPage;
+
+	filteredCards.slice(start, end).forEach((card) => {
+		card.classList.remove("is-hidden");
+	});
+
+	renderPagination(totalPages);
+}
+
+function renderPagination(totalPages) {
+	if (!paginationContainer) return;
+
+	paginationContainer.innerHTML = "";
+
+	if (totalPages <= 1) return;
+
+	for (let i = 1; i <= totalPages; i++) {
+		const button = document.createElement("button");
+		button.type = "button";
+		button.className = "pagination-btn";
+		button.textContent = i;
+
+		if (i === currentPage) {
+			button.classList.add("is-active");
+		}
+
+		button.addEventListener("click", () => {
+			currentPage = i;
+			closeExpandedReviews();
+			renderProducts();
+
+			document.querySelector("#productsFilter").scrollIntoView({
+				behavior: "smooth",
+				block: "start"
+			});
+		});
+
+		paginationContainer.appendChild(button);
 	}
 }
 
@@ -45,8 +111,11 @@ filterButtons.forEach((button) => {
 		filterButtons.forEach((btn) => btn.classList.remove("is-active"));
 		button.classList.add("is-active");
 
-		const selectedFilter = button.dataset.filter;
-		filterProducts(selectedFilter);
+		currentFilter = button.dataset.filter;
+		currentPage = 1;
+
+		closeExpandedReviews();
+		renderProducts();
 	});
 });
 
@@ -68,3 +137,5 @@ toggleButtons.forEach((button) => {
 		}
 	});
 });
+
+renderProducts();
