@@ -1,5 +1,4 @@
 /* ===== PLACES PAGE ===== */
-
 .places-hero {
 	background: linear-gradient(
 		180deg,
@@ -65,7 +64,9 @@
 }
 
 .places-section {
-	background: var(--white);
+	/*padding-top: 30px;
+	padding-bottom: 60px;*/
+	background: #f8f9fa;
 }
 
 .places-section__inner {
@@ -173,140 +174,119 @@
 }
 
 .places-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	display: flex;
+	flex-direction: column;
 	gap: 24px;
 }
 
-.place-card {
+.places-card {
+	margin-bottom: 2rem;
 	background: var(--white);
-	border: 1px solid rgba(0, 0, 0, 0.06);
-	border-radius: 20px;
-	box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
 	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+	border: 1px solid rgba(0, 0, 0, 0.05);
 	display: flex;
 	flex-direction: column;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	transition: transform 0.3s ease;
 }
 
-.place-card:hover {
+.places-card:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
 }
 
-.place-card__image-wrap {
-	aspect-ratio: 16 / 10;
-	background: #e8e8e8;
-	overflow: hidden;
+.places-image-wrapper {
+	position: relative;
+	flex: 1;
 }
 
-.place-card__image {
+.places-image-wrapper img {
 	width: 100%;
 	height: 100%;
-	display: block;
 	object-fit: cover;
 }
 
-.place-card__body {
-	padding: 20px;
+.places-tag {
+	padding: 5px 12px;
+	background: #4a7c44;
+	color: var(--white);
+	font-size: .75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 20px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.places-card-body {
+	padding: 1.5rem;
+	flex: 1.5;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	justify-content: center;  
 }
 
-.place-card__tag {
-	margin-bottom: 10px;
-	padding: 5px 10px;
-	display: inline-block;
-	width: fit-content;
-	background: rgba(231, 109, 170, 0.12);
-	color: var(--creative);
-	font-size: 0.75rem;
-	font-weight: 700;
-	border-radius: 999px;
-	letter-spacing: 0.02em;
+.places-title {
+	margin: 0 0 0.5rem 0;
+	color: #222;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.4rem;
 }
 
-.place-card__title {
-	margin: 0 0 6px;
-	color: var(--navy);
-	font-size: 1.2rem;
-	line-height: 1.25;
+.places-metadata {
+	margin-bottom: 1rem;
+	color: #666;
+	font-size: 0.85rem;
 }
 
-.place-card__meta {
-	margin: 0 0 10px;
-	color: rgba(74, 74, 74, 0.78);
-	font-size: 0.88rem;
+.places-summary {
+	margin-bottom: 1.5rem;
+	color: #444;
+	font-size: 0.95rem;
+	line-height: 1.5;
 }
 
-.place-card__summary {
-	margin: 0 0 16px;
-	color: var(--gray-dark);
-	line-height: 1.65;
-}
-
-.place-card__toggle {
-	margin-top: auto;
-	padding: 0;
+.places-button {
+	padding: 8px 20px;
 	background: transparent;
-	border: 0;
-	color: var(--navy);
-	font: inherit;
-	font-weight: 700;
+	color: #4a7c44;
+	font-weight: 600;
+	border-radius: 6px;
+	align-self: flex-start;
+	border: 2px solid #4a7c44;
 	cursor: pointer;
-	text-align: left;
-	text-decoration: underline;
-	text-underline-offset: 4px;
-	text-decoration-thickness: 1.5px;
-	transition: color var(--transition);
+	transition: all 0.3s ease;  
 }
 
-.place-card__toggle:hover {
-	color: var(--creative);
+.places-button:hover {
+	background: #4a7c44;
+	color: var(--white);  
 }
 
-.place-card__toggle:focus-visible {
-	outline: 3px solid rgba(231, 109, 170, 0.4);
-	outline-offset: 3px;
+.place-card__full {  
+    margin-top: 1.5rem;  
+    padding-top: 1.5rem;  
+    border-top: 1px solid rgba(0, 0, 0, 0.08);  
 }
 
-.place-card__full {
-	margin-top: 18px;
-	padding-top: 18px;
-	border-top: 1px solid rgba(0, 0, 0, 0.08);
-	color: var(--gray-dark);
-	line-height: 1.7;
+.expanded-review-content h4 {  
+    color: #4A7C44; /* The Sage Forest accent */  
+    font-size: 1.1rem;  
+    margin: 1.2rem 0 0.5rem;  
 }
 
-.place-card__full p {
-	margin: 0;
+.expanded-review-content p {  
+    font-size: 0.95rem;  
+    line-height: 1.6;  
+    color: #555;  
+    margin-bottom: 1rem;  
 }
 
-/* Mobile */
-@media (max-width: 899px) {
-	.places-hero__inner {
-		padding: 40px 16px;
-		grid-template-columns: 1fr;
-	}
-
-	.places-layout {
-		grid-template-columns: 1fr;
-	}
-
-	.places-tabs {
-		position: static;
-		display: flex;
-		overflow-x: auto;
-		padding: 12px;
-	}
-
-	.places-tabs__btn {
-		min-width: max-content;
-		text-align: center;
-	}
-
-	.places-grid {
-		grid-template-columns: 1fr;
+@media (min-width: 768px) {
+	.places-card {
+		flex-direction: row;
+		height: 280px;
 	}
 }
