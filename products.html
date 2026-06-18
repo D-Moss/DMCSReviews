@@ -838,6 +838,18 @@
 		</div>
 	</footer>
 
-	<script src="products.js"></script>
+	<!-- Product Review Modal -->
+	<div id="product-modal" class="modal" role="dialog" aria-modal="true">
+		<div class="modal-content">
+			<button class="close-modal" onclick="toggleModal()" aria-label="Close modal">&times;</button>
+			<div id="modal-body">
+				<!-- Content will be injected here -->		
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Overlay -->
+		<div id="modal-overlay" class="modal-overlay" onclick="toggleModal()"></div>
+		<script src="products.js"></script>
 </body>
 </html>

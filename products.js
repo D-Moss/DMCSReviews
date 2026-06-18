@@ -119,23 +119,40 @@ filterButtons.forEach((button) => {
 	});
 });
 
-const toggleButtons = document.querySelectorAll(".products-card__toggle");
-
-toggleButtons.forEach((button) => {
-	button.addEventListener("click", () => {
-		const fullReview = button.closest(".products-card__body").querySelector(".products-card__full");
-		const isExpanded = button.getAttribute("aria-expanded") === "true";
-
-		if (isExpanded) {
-			fullReview.hidden = true;
-			button.setAttribute("aria-expanded", "false");
-			button.textContent = "Read More";
-		} else {
-			fullReview.hidden = false;
-			button.setAttribute("aria-expanded", "true");
-			button.textContent = "Show Less";
-		}
-	});
-});
-
 renderProducts();
+
+const modal = document.getElementById('product-modal');  
+const modalOverlay = document.getElementById('modal-overlay');  
+const modalBody = document.getElementById('modal-body');
+
+function toggleModal() {  
+    modal.classList.toggle('active');  
+    modalOverlay.classList.toggle('active');  
+    // Stop the background from scrolling when modal is open  
+    document.body.style.overflow = modal.classList.contains('active') ? 'hidden' : '';  
+}
+
+// Select all your 'Read More' buttons  
+const productButtons = document.querySelectorAll(".products-card__toggle");
+
+productButtons.forEach((button) => {  
+    button.addEventListener("click", () => {  
+        // Find the card this button belongs to  
+        const card = button.closest('.products-card');  
+          
+        // Grab the data we want to show  
+        const title = card.querySelector('.products-card__title').innerText;  
+        const fullContent = card.querySelector(".products-card__full").innerHTML;  
+        const imgSrc = card.querySelector(".products-card__image").src;
+
+        // Build the modal content (I added the image at the top for a nice touch)  
+        modalBody.innerHTML = `  
+            <img src="${imgSrc}" class="modal-image-header" alt="${title}">  
+            <h3>${title}</h3>  
+            ${fullContent}  
+        `;
+
+        // Open it up!  
+        toggleModal();  
+    });  
+});

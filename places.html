@@ -28,6 +28,7 @@
 	</header>
 
 	<main>
+		<!----- HERO SECTION ----->
 		<section class="places-hero" aria-labelledby="places-hero-title">
 			<div class="places-hero__inner">
 				<div class="places-hero__copy">
@@ -56,6 +57,7 @@
 			</div>
 		</section>
 
+		<!----- SIDE BAR SECTION ----->
 		<section class="places-section" aria-labelledby="places-section-title">
 			<div class="places-section__inner">
 				<div class="places-section__header">
@@ -94,10 +96,10 @@
 									<div class="places-card">
 										<div class="places-image-wrapper">
 											<img src="https://i.postimg.cc/4dv6WBBQ/Dlkd-OAw-Gvu22Z6umk-VVd6E-KDc7QPn-XUDVd9P7Onh-TATom1eh-SDNX6Zydz6Trk-G1j-PNTi-Aiwi-Rl-XNPONPx-A4wncj.jpg" alt="Luxor Hotel Las Vegas exterior">
-											<span class="places-tag">Hotel</span>
 										</div>
 
 										<div class="places-card-body">
+											<span class="places-tag">Hotel</span>
 											<h3 class="places-title">Luxor Las Vegas</h3>
 											<div class="places-metadata">
 												<span class="icon">📍</span> Las Vegas, NV • Real Experience
@@ -162,35 +164,80 @@
 							</div>
 						</div>
 
+						<!-- ATTRACTIONS -->
 						<div class="places-panel" data-panel="attractions" hidden>
 							<div class="places-grid">
 
-								<!--
 								<article class="place-card">
-									<div class="place-card__image-wrap">
-										<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=70" alt="Outdoor attraction" class="place-card__image">
-									</div>
+									<div class="places-card">
+										<div class="places-image-wrapper">
+											<img src="https://cdn.marblism.com/tOXg6o-Jrls.webp" alt="Panoramic view of the Hoover Dam">
+										</div>
 
-									<div class="place-card__body">
-										<span class="place-card__tag">Attraction</span>
-										<h3 class="place-card__title">Attraction Review Name</h3>
-										<p class="place-card__meta">Location • Experience</p>
-										<p class="place-card__summary">
-											A short preview of the attraction review can go here.
-										</p>
-
-										<button class="place-card__toggle" type="button" aria-expanded="false">
-											Read More
-										</button>
-
-										<div class="place-card__full" hidden>
-											<p>
-												Add the full attraction review here. Talk about the experience, crowd, parking, price, photos, and whether it was worth visiting.
+										<div class="places-card-body">
+											<span class="places-tag">Adventure</span>
+											
+											<h3 class="places-title">3-Hour Hoover Dam Mini Tour</h3>
+											<div class="places-metadata">
+												<span class="icon">📍</span> Nevada/Arizona Border • Real Experience
+											</div>
+											<p class="places-summary">
+												Trading the neon for an engineering marvel. A quick, informative escape from the Strip that features stunning views and a surprise wildlife encounter.
 											</p>
+
+											<button class="places-button place-card__toggle" type="button" aria-expanded="false">
+												View Full Review
+											</button>
+
+											<div class="place-card__full" hidden>
+												<div class="expanded-review-content">
+													<p>Sometimes you need a break from the neon, and the <strong>Award Winning 3-Hour Hoover Dam Small Group Mini Tour</strong> was the perfect way to spend a morning. It was so refreshing to head out of Vegas and dive into the actual history and engineering behind such a massive landmark.</p>
+
+													<p>The tour was incredibly informative—I walked away knowing so many more interesting facts about the dam's construction and its impact than I ever expected. It wasn't just a dry history lesson; the views were stunning, and the small group size kept it feeling personal and easy-going.</p>
+
+													<p>The real highlight? We actually got to see <strong>bighorn sheep</strong>! It was such an added bonus to see local wildlife in their natural habitat right near the dam. It really made the experience feel authentic and grounded.</p>
+
+													<p>If you're looking for a fun, quick trip that gives you a new perspective on the area without taking up your whole day, this is definitely worth it. It’s an honest, well-managed tour that delivers exactly what it promises.</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</article>
-								-->
+
+								<article class="place-card">
+									<div class="places-card">
+										<div class="places-image-wrapper">
+											<img src="https://cdn.marblism.com/vV7I69N9V_7.png" alt="Wild West Sunset Horseback Ride mountain view">
+										</div>
+
+										<div class="places-card-body">
+											<span class="places-tag">Adventure</span>
+											<h3 class="places-title">Wild West Sunset Horseback Ride</h3>
+											<div class="places-metadata">
+												<span class="icon">📍</span> Las Vegas, NV • Real Experience
+											</div>
+											<p class="places-summary">
+												Trading the neon lights for mountain heights. An authentic desert trek that ends with a breathtaking sunset and a quiet sense of peace.
+											</p>
+
+											<button class="places-button place-card__toggle" type="button" aria-expanded="false">
+												View Full Review
+											</button>
+
+											<div class="place-card__full" hidden>
+												<div class="expanded-review-content">
+													<p>This August 2021 memory remains one of my favorites. Stepping away from the Las Vegas Strip and into the rugged desert landscape for the <strong>Wild West Sunset Horseback Ride</strong> was the perfect reset button.</p>
+
+													<p>I suited up in my favorite lace-up shirt and black fedora, and the experience felt authentic from the first trot. There’s something incredibly grounding about being on horseback as the sun begins to dip below the mountain range.</p>
+
+													<p>The views were the real standout—vast, open skies and deep shadows stretching across the valley. It wasn't just a ride; it was a front-row seat to the desert's natural beauty at its most vibrant hour.</p>
+
+													<p>If you're looking for an honest break from the city's noise, this is it. It’s a well-managed, respectful, and genuinely moving way to see the other side of Nevada.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article> 
 
 							</div>
 						</div>
@@ -278,6 +325,19 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Side Panel Structure -->
+	<div id="side-panel" class="side-panel">
+		<div class="panel-header">
+			<button class="close-panel" onclick="togglePanel()" aria-label="Close panel">&times;</button>
+		</div>
+		<div class="panel-content" id="panel-body">
+			<!-- JS will inject the review here -->
+		</div>
+	</div>
+
+	<!-- Background Overlay -->
+	<div id="panel-overlay" class="overlay" onclick="togglePanel()"></div>
 
 	<script src="places.js"></script>
 </body>
